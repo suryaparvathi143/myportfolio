@@ -2,7 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  const numbers=[1,2,3,4,5];
+  const numbersList=numbers.map((number)=>{
+    return <li key={number}>{number}</li>;
+  });
+  return ( 
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+        <ul>{numbersList}</ul>
       </header>
     </div>
   );
